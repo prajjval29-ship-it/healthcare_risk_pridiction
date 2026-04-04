@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+healthcare_risk.db
+models/*.pkl
+.streamlit/secrets.toml
