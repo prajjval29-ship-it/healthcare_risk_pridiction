@@ -4,13 +4,13 @@ Internship-style project: clean two public health CSVs, store them in **SQLite**
 
 **Disclaimer:** This is a learning demo. It is **not** validated for clinical or diagnostic use.
 
-## What you can say in an interview
 
-1. **Data pipeline:** I preprocess the Pima diabetes file by treating clinical zeros as missing values where appropriate, impute medians, and normalize the heart-disease CSV (rename columns, encode `Presence`/`Absence` as 1/0).
 
-2. **Database:** I load cleaned rows into SQLite with a clear schema. Analytics (high-risk counts, mean comparisons by label, age/gender buckets) are plain SQL — easy to show in `sql/analytics.sql` or in the API.
+1. **Data pipeline:** It preprocess the Pima diabetes file by treating clinical zeros as missing values where appropriate, impute medians, and normalize the heart-disease CSV (rename columns, encode `Presence`/`Absence` as 1/0).
 
-3. **ML:** I use **logistic regression** inside a **Pipeline** with **StandardScaler** for stable training, then map predicted probability to **low / medium / high** risk bands for storytelling.
+2. **Database:** It load cleaned rows into SQLite with a clear schema. Analytics (high-risk counts, mean comparisons by label, age/gender buckets) are plain SQL — easy to show in `sql/analytics.sql` or in the API.
+
+3. **ML:** It use **logistic regression** inside a **Pipeline** with **StandardScaler** for stable training, then map predicted probability to **low / medium / high** risk bands for storytelling.
 
 4. **Backend:** FastAPI validates JSON with **Pydantic**, returns probabilities plus human-readable insight text, and aggregates SQL for `/risk-summary`.
 
